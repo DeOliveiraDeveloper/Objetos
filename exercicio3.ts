@@ -34,4 +34,11 @@ const cartao: TCliente = {
     ]
 } 
 
-console.log(cartao);
+// console.log(cartao);
+let total = 0;
+
+for (let soma of cartao.produtosConsumidos){
+    total += soma.preco * soma.qtd
+}
+
+console.log(`Olá ${cartao.nome}, seu consumo foi de R$${total}`);
